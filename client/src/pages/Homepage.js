@@ -9,7 +9,7 @@ import Hello from '../components/Carousel/Slider';
 function Homepage() {
   return (
     <>
-      <Box sx={{ minHeight: '80px' }}>
+      <Box sx={{ minHeight: "80px" }}>
         <Navbar />
       </Box>
       <Hello />
@@ -17,8 +17,7 @@ function Homepage() {
       <Pricing />
       <Footer />
     </>
-
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

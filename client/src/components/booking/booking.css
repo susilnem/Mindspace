@@ -1,0 +1,13 @@
+.container {
+  background-color: red;
+  /* display: flex; */
+  /* justify-content: space-around; */
+}
+.counsellors {
+  width: 15rem;
+  height: 3rem;
+}
+
+.bookdate {
+  padding: 1.5rem;
+}
