@@ -25,7 +25,7 @@ svg {
 }
 
 .arrow {
-    stroke-width: .3px;
+    stroke-width: 0.3px;
     stroke: yellow;
 }
 
@@ -48,7 +48,7 @@ svg {
     animation: drop 5s ease infinite normal;
     stroke: #4478e3;
     stroke-width: 0.5;
-    opacity: .6;
+    opacity: 0.6;
     transform: translateY(80%);
 }
 
@@ -75,26 +75,26 @@ svg {
 #wave2 {
     animation-duration: 5s;
     animation-direction: reverse;
-    opacity: .6
+    opacity: 0.6;
 }
 
 #wave3 {
     animation-duration: 7s;
-    opacity: .3;
+    opacity: 0.3;
 }
 
 @keyframes drop {
     0% {
         transform: translateY(80%);
-        opacity: .6;
+        opacity: 0.6;
     }
     80% {
         transform: translateY(80%);
-        opacity: .6;
+        opacity: 0.6;
     }
     90% {
         transform: translateY(10%);
-        opacity: .6;
+        opacity: 0.6;
     }
     100% {
         transform: translateY(0%) scale(1.5);
