@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+import datetime
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,15 +46,21 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APPS = [
-    # 'rest_framework',
-    # 'rest_framework_simplejwt',
-    # 'corsheaders',
+LOCAL_APPS = [
+    'apps.counsellor',
+    'apps.patient',
+    'apps.qna',
+    'apps.blog',
+    'apps.booking'
 ]
 
-LOCAL_APPS = [
-    'apps',
+THIRD_PARTY_APPS = [
+    # 'djoser',
+    'rest_framework',
+    # 'rest_framework_simplejwt',
+    'corsheaders',
 ]
+
 
 INSTALLED_APPS = DJANGO_APPS+LOCAL_APPS+THIRD_PARTY_APPS
 
@@ -130,7 +137,73 @@ MEDIA_ROOT = os.path.join(ROOT_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        # enables simple command line authentication
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+
+    ),
+}
+
+LOGIN_URL = 'rest_framework:login'
+LOGOUT_URL = 'rest_framework:logout'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AUTH_USER_MODEL = "apps.patient"
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(weeks=1),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=3),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': False,
+
+    'ALGORITHM': 'HS256',
+    'SIGNING_KEY': 'x#iyg%&u672hwvqw=a8_tk3^69f5wd!ydiw@y)2s+0eepm5cl2',
+    'VERIFYING_KEY': None,
+    'AUDIENCE': None,
+    'ISSUER': None,
+
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM': 'token_type',
+
+    'JTI_CLAIM': 'jti',
+
+    'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
+    'SLIDING_TOKEN_LIFETIME': datetime.timedelta(days=1),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': datetime.timedelta(days=3),
+}
+
+# # Djoser Setup
+# DJOSER = {
+#     'LOGIN_FIELD': 'email',
+#     'USER_CREATE_PASSWORD_RETYPE': True,
+#     'USERNAME_CHANGED_EMAIL_CONFIRMATION': False,
+#     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
+#     'SEND_CONFIRMATION_EMAIL': True,
+#     'SET_USERNAME_RETYPE': False,
+#     'SET_PASSWORD_RETYPE': False,
+#     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+#     'USERNAME_RESET_CONFIRM_URL': 'email/reset/confirm/{uid}/{token}',
+#     'ACTIVATION_URL': '/activate/{uid}/{token}',
+#     'SEND_ACTIVATION_EMAIL': True,
+#     'SERIALIZERS': {
+#         # # custom serializer
+#         # 'user_create': 'users.api.v1.serializers.UserRegistrationSerializer',
+#         # 'user': 'users.api.v1.serializers.UserRegistrationSerializer',
+#         # 'user_delete': 'djoser.serializers.UserDeleteSerializer',
+#     },
+# }
