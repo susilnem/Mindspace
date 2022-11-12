@@ -37,15 +37,15 @@ export default function Review() {
             >
               <div style={{ display: "inline-flex " }}>
                 <FormControlLabel value="esewa" control={<Radio />} />
-                <img src={esewa} style={{ width: "45px" }}></img>
+                <img src={esewa} alt="esewa" style={{ width: "45px" }}></img>
               </div>
               <div style={{ display: "inline-flex" }}>
                 <FormControlLabel value="khalti" control={<Radio />} />
-                <img src={khalti} style={{ width: "60px" }}></img>
+                <img src={khalti} alt="khalti" style={{ width: "60px" }}></img>
               </div>
               <div style={{ display: "inline-flex" }}>
                 <FormControlLabel value="imepay" control={<Radio />} />
-                <img src={imepay} style={{ width: "60px" }}></img>
+                <img src={imepay} alt="imepay" style={{ width: "60px" }}></img>
               </div>
             </RadioGroup>
           </Typography>

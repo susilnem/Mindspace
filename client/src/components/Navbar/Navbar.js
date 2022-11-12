@@ -1,76 +1,63 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import { useNavigate } from 'react-router-dom'
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom";
 //logo
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
-
-const pages = ['Services', 'Blog', 'Login', 'Signup'];
+const pages = ["AboutUs", "Services", "Blog", "Login", "Signup"];
 
 const appbarStyle = {
-  height: '80px',
-  display: 'flex',
-  background: '#42A5F5',
-}
+  height: "80px",
+  display: "flex",
+  background: "#42A5F5",
+};
 
 function Navbar() {
   const navigate = useNavigate();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [hidelogin, sethidelogin] = React.useState(true);
 
+  const hideloginfunc = (event) => {
+    sethidelogin(!hidelogin);
+  };
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    // setAnchorElNav(null);
-
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
-    <AppBar sx={{appbarStyle}} >
+    <AppBar sx={{ appbarStyle }}>
       <Container maxWidth="xl">
-        <Toolbar >
-          <Box >
+        <Toolbar>
+          <Box>
             <Typography
               variant="h6"
               noWrap
               component="a"
               href="/"
               sx={{
-                // mr: 12, 
-                // justifyContent:'end',
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
             >
               <Logo />
             </Typography>
           </Box>
 
-          {/* ///for small xs */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -81,22 +68,22 @@ function Navbar() {
             >
               <MenuIcon />
             </IconButton>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
@@ -113,32 +100,34 @@ function Navbar() {
             href=""
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
             }}
-          >   <Logo />
-
+          >
+            <Logo />
           </Typography>
 
-
-
-          <Box justifyContent='end' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={() => navigate(`/${page}`)}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
+          {hidelogin && (
+            <Box
+              justifyContent="end"
+              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            >
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={() => navigate(`/${page}`)}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page}
+                </Button>
+              ))}
+            </Box>
+          )}
         </Toolbar>
       </Container>
     </AppBar>

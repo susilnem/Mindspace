@@ -1,9 +1,9 @@
-import React from 'react'
-import './slider.css'
-import Image1 from '../../assets/banner_mental_health.png'
-import Image2 from '../../assets/banner_mental_health_1.png'
-import Image3 from '../../assets/banner_mental_health2.png'
-import Image4 from '../../assets/banner_mental_health3.png'
+import React from "react";
+import "./slider.css";
+import Image1 from "../../assets/banner_mental_health.png";
+import Image2 from "../../assets/banner_mental_health_1.png";
+import Image3 from "../../assets/banner_mental_health2.png";
+import Image4 from "../../assets/banner_mental_health3.png";
 
 function Slider() {
   return (
@@ -13,7 +13,7 @@ function Slider() {
           <input type="radio" name="radio-buttons" id="img-1" defaultChecked />
           <li className="slide-container">
             <div className="slide-image">
-              <img src={Image1} />
+              <img alt="img1" src={Image1} />
             </div>
             <div className="carousel-controls">
               <label htmlFor="img-4" className="prev-slide">
@@ -27,8 +27,7 @@ function Slider() {
           <input type="radio" name="radio-buttons" id="img-2" />
           <li className="slide-container">
             <div className="slide-image">
-              <img src={Image2} />
-
+              <img alt="img2" src={Image2} />
             </div>
             <div className="carousel-controls">
               <label htmlFor="img-2" className="prev-slide">
@@ -42,7 +41,7 @@ function Slider() {
           <input type="radio" name="radio-buttons" id="img-3" />
           <li className="slide-container">
             <div className="slide-image">
-              <img src={Image3} />
+              <img alt="img3" src={Image3} />
             </div>
             <div className="carousel-controls">
               <label htmlFor="img-3" className="prev-slide">
@@ -56,7 +55,7 @@ function Slider() {
           <input type="radio" name="radio-buttons" id="img-4" />
           <li className="slide-container">
             <div className="slide-image">
-              <img src={Image4} />
+              <img alt="img4" src={Image4} />
             </div>
             <div className="carousel-controls">
               <label htmlFor="img-4" className="prev-slide">
@@ -79,5 +78,4 @@ function Slider() {
   );
 }
 
-
-export default Slider
+export default Slider;

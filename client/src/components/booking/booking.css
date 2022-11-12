@@ -1,7 +1,5 @@
-.container {
-  background-color: red;
-  /* display: flex; */
-  /* justify-content: space-around; */
+.booking {
+  padding-top: 5rem;
 }
 .counsellors {
   width: 15rem;
