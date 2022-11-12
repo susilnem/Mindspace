@@ -3,11 +3,18 @@ import Navbar from "../Navbar/Navbar";
 import Card from "./Card";
 import anxiety from "../../assets/anxiety.jpg";
 import mentalhealth from "../../assets/mental-health.jpeg";
+import { Typography } from "@mui/material";
 
 function Blog() {
   return (
     <>
       <Navbar />
+      <Typography
+        align="center"
+        sx={{ marginTop: "100px", fontSize: "50px", color: "#42a5f5" }}
+      >
+        Blog
+      </Typography>
       <div className="instances">
         <Card
           img={anxiety}
