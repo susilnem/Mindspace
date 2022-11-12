@@ -1,0 +1,25 @@
+.banner1 {
+    background: url(../assets/img1.jpeg);
+    background-size: cover;
+    height: 700px;
+    min-width: 100%;
+    margin: -10px;
+    opacity: 0.2;
+}
+
+.bannerText {
+    font-size: 80px;
+    margin-top: -400px;
+    margin-left: 280px;
+    margin-bottom: 380px;
+    animation: run ease 3s;
+}
+
+@keyframes run {
+    0% {
+        margin-top: -10%;
+    }
+    100% {
+        margin-bottom: 20%;
+    }
+}
