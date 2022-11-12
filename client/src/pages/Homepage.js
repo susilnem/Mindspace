@@ -1,10 +1,10 @@
 import React from 'react'
 import Box from '@mui/material/Box';
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer';
-import Pricing from '../components/Pricing';
-import Context from '../components/Context';
-import Hello from '../components/Slider';
+import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer';
+import Pricing from '../components/Pricing/Pricing';
+import Context from '../components/AboutUS/Context';
+import Hello from '../components/Carousel/Slider';
 
 function Homepage() {
   return (

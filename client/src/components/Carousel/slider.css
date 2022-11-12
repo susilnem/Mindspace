@@ -1,12 +1,13 @@
-/* .carousel {
-    margin-left: 15%;
-    margin-right: 15%;
-} */
+.carousel {
+    margin-top: 20px;
+    /* margin-left: 15%;
+    margin-right: 15%; */
+}
 
 ul.slides {
     display: block;
     position: relative;
-    height: 600px;
+    height: 650px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -53,7 +54,7 @@ ul.slides input {
     right: 0;
     z-index: 999;
     font-size: 100px;
-    line-height: 500px;
+    line-height: 600px;
     color: #fff;
 }
 

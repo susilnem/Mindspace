@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Homepage from "./pages/Homepage";
-import LoginForm from './pages/Login';
-import Signup from './pages/Signup';
+import LoginForm from './pages/AuthForm/Login';
+import Signup from './pages/AuthForm/Signup';
 function App() {
   return (
     <div className="App">

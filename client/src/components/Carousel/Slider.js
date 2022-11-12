@@ -1,9 +1,9 @@
 import React from 'react'
 import './slider.css'
-import Image1 from '../assets/unknown.png'
-import Image2 from '../assets/unknown1.png'
-import Image3 from '../assets/unknown2.png'
-import Image4 from '../assets/bannerrr.png'
+import Image1 from '../../assets/banner_mental_health.png'
+import Image2 from '../../assets/banner_mental_health_1.png'
+import Image3 from '../../assets/banner_mental_health2.png'
+import Image4 from '../../assets/banner_mental_health3.png'
 
 function Slider() {
   return (
