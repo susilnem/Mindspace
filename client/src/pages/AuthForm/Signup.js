@@ -37,10 +37,10 @@ const App = () => {
 
     return (
         <Fragment>
-            <Paper>
-                <Typography variant="h4" align="center" margin="dense">
-                    Sign Up
-                </Typography>
+            <Paper sx={{margin:'200px'}}>
+            <Typography align='center' sx={{ fontSize: '50px', color: '#42a5f5', }}>
+              Sign Up
+              </Typography >
                 <Box px={3} py={2}>
                     <Grid container spacing={1}>
                         <Grid item xs={12} sm={12}>

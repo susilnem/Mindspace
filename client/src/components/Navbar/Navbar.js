@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom'
 //logo
-import { ReactComponent as Logo } from "../assets/logo.svg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 
 const pages = ['Services', 'Blog', 'Login', 'Signup'];
@@ -19,7 +19,7 @@ const pages = ['Services', 'Blog', 'Login', 'Signup'];
 const appbarStyle = {
   height: '80px',
   display: 'flex',
-  background: '#42A5F5'
+  background: '#42A5F5',
 }
 
 function Navbar() {
@@ -45,7 +45,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar {...appbarStyle} >
+    <AppBar sx={{appbarStyle}} >
       <Container maxWidth="xl">
         <Toolbar >
           <Box >
