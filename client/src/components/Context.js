@@ -3,7 +3,6 @@ import { Grid, Box, Typography } from '@mui/material';
 import SideImg from '../assets/img4.png'
 import SideImg1 from '../assets/img3.webp'
 
-import './context.css'
 
 function Context() {
   return (
