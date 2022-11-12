@@ -1,0 +1,24 @@
+/*  */
+
+.active {
+    transform: scale(1.1);
+    transition: transform 0.25s;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    /* z-index: 999; */
+}
+
+.popup {
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.popup:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.active:hover {
+    transform: scale(1.2);
+    transition: transform 0.25s;
+    z-index: 999;
+}
