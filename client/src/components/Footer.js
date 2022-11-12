@@ -39,7 +39,7 @@ function Footer() {
 </g>
 </g */}
                 </g>
-                </svg>
+            </svg>
         </footer>
     )
 }
