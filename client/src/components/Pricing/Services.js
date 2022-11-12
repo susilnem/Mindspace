@@ -33,13 +33,15 @@ function Services() {
               should approach it as they would any other health problem.
             </Typography>
             <Box align="center">
-              <Button
-                sx={{ padding: "15px" }}
-                variant="contained"
-                endIcon={<SendIcon />}
-              >
-                Book Now
-              </Button>
+              <a href="/booking" style={{ textDecoration: "none" }}>
+                <Button
+                  sx={{ padding: "15px" }}
+                  variant="contained"
+                  endIcon={<SendIcon />}
+                >
+                  Book Now
+                </Button>
+              </a>
             </Box>
           </Grid>
           <Grid item md={6} xl={6} sx={{ display: { xs: "none", md: "flex" } }}>

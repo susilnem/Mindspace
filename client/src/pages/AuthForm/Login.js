@@ -82,6 +82,20 @@ const App = () => {
             >
               Sign In
             </Button>
+            <Typography
+              variant="inherit"
+              mt="10px"
+              align="center"
+              color="textSecondary"
+            >
+              No Account?
+              <a
+                style={{ textDecoration: "none", paddingLeft: "5px" }}
+                href="/signup"
+              >
+                Sign up
+              </a>
+            </Typography>
           </Box>
         </Box>
       </Paper>
