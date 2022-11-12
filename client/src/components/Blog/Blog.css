@@ -1,0 +1,27 @@
+.card{
+    width:auto;
+    display: flex;
+    justify-content: center;
+    padding:25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius:5px;
+    margin:25px;
+}
+.img{
+    width:330px;
+    height:250px;
+    justify-content: center;
+}
+.container{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.instances{
+    width: auto;
+    padding: 3rem;
+    display:flex;
+    justify-content: space-around;
+}
